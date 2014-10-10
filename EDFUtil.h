@@ -10,8 +10,8 @@
 #include <sstream>
 #include <string>
 
-double& a2f(std::string);
-double& a2i(std::string);
+double a2f(std::string);
+double a2i(std::string);
 string convertSpaces(const std::string&);
 string convertUnderscores(const std::string&);
 string trim(string);

@@ -25,7 +25,9 @@ using std::endl;
  this class.
  @param path Path to the EDF file on disk.
 */
-EDFFile::EDFFile(const char* path) {
+EDFFile::EDFFile(const char* path)
+    :header(NULL), annotation(NULL)
+{
     filePath = string(path);
     fileStream.open(path, std::ios::in | std::ios::binary);
     if (!fileStream.is_open())
