@@ -103,9 +103,14 @@ void printSignalData(EDFFile& file, int signal, float start, float length) {
         }
         cout << endl << endl;
     }
+    delete sigData;
 }
 
 int main(int argc, char** argv) {
+    if(argc != 3) {
+        cout << "Usage: test FILE.edf SIGNAL_ID" << endl;
+        return 1;
+    }
     EDFFile newFile(argv[1]);
     int signal = atoi(argv[2]) - 1;
 
